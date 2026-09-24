@@ -16,5 +16,12 @@ This Information System is designed to intercept database queries made by autono
 
 <img width="650" height="650" alt="enclave_topology" src="https://github.com/user-attachments/assets/a03327f8-abed-41cb-aaa7-fb6592269e8b" />
 
-*Sanitization Enclave Topology*
+*Sanitization Enclave Data Flow*
+
+### How it Works
+
+1. An authenticated user or AI agent queries the patient database to retrieve information. The request is evaluated at a Policy Enforcement Point, and the user status is determined based on the JWT claims (human user or AI agent). If the user is a human, they can access un-sanitized data. If not, the request is forwarded to the enclave.
+2. The enclave queries the database with the forwarded request, and information is retrieved on behalf of the agent.
+3. The raw, un-sanitized data passes through the sanitization pipeline, scrubbing user PHI. Regex handles structured data, NER models catch more complex sentences and information, and AI handles edge cases.
+4. After the data is confirmed to be sanitized, it is returned to the agentic for it to continue its workflow.
 
