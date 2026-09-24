@@ -8,7 +8,7 @@ Modern healthcare environments increasingly leverage autonomous AI agents to per
 
 ## Scope
 
-The assessment is purely being conducted on the information system described above, and findings align with the NIST AI Risk Management Framework and incorporates threat profiles detailed in NIST AI 100-2e2023 (Adversarial Machine Learning: A Taxonomy and Terminology of Attacks and Mitigations).
+The assessment is purely being conducted on the information system described above, and findings align with the NIST AI Risk Management Framework and incorporates threat profiles detailed in NIST AI 100-2e2023 (Adversarial Machine Learning: A Taxonomy and Terminology of Attacks and Mitigations). Risks are surrounding the system itself, and not the acquisition of the system (third-party risks and poor model training)
 
 ## System Architecture
 
