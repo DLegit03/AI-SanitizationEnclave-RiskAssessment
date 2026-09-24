@@ -2,9 +2,9 @@
 
 Modern healthcare environments increasingly leverage autonomous AI agents to perform complex clinical reporting, operational analytics, and decision support. However, granting generative systems direct read access to health databases introduces severe data leakage risks, directly impacting HIPAA compliance. To reduce unauthorized exposure of PHI, this risk assessment evaluates a Multi-Tier Sanitization Enclave. Positioned as an intermediary between a database and querying agents, the enclave deploys a defense-in-depth pipeline consisting of:
 
--Tier 1: Deterministic Sanitization Rules (Regex) for structured, standardized identifiers.
--Tier 2: Named Entity Recognition (NER) models for semi-structured text.
--Tier 3: Agentic Generative AI to resolve edge cases.
+- Tier 1: Deterministic Sanitization Rules (Regex) for structured, standardized identifiers.
+- Tier 2: Named Entity Recognition (NER) models for semi-structured text.
+- Tier 3: Agentic Generative AI to resolve edge cases.
 
 ## Scope
 
