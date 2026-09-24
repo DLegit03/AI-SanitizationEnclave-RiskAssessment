@@ -1,6 +1,6 @@
 ## Project Overview
 
-Modern healthcare environments increasingly leverage autonomous AI agents to perform complex clinical reporting, operational analytics, and decision support. However, granting generative systems direct read access to health databases introduces severe data leakage risks, directly impacting HIPAA compliance. To reduce unauthorized exposure of PHI, this risk assessment evaluates a Multi-Tier Sanitization Enclave. Positioned as an intermediary between a database and querying agents, the enclave deploys a defense-in-depth pipeline consisting of:
+Modern healthcare environments increasingly leverage autonomous AI agents to perform complex clinical reporting, operational analytics, and decision support. However, granting generative systems direct read access to health databases introduces severe data leakage risks, directly impacting HIPAA compliance. To reduce unauthorized exposure of PHI, this risk assessment evaluates a Multi-Tier Sanitization Enclave. Positioned between a database and querying agents, the enclave deploys a defense-in-depth pipeline consisting of:
 
 - Tier 1: Deterministic Sanitization Rules (Regex) for structured, standardized identifiers.
 - Tier 2: Named Entity Recognition (NER) models for semi-structured text.
@@ -21,7 +21,10 @@ This Information System is designed to intercept database queries made by autono
 ### How it Works
 
 1. An authenticated user or AI agent queries the patient database to retrieve information. The request is evaluated at a Policy Enforcement Point, and the user status is determined based on the JWT claims (human user or AI agent). If the user is a human, they can access un-sanitized data. If not, the request is forwarded to the enclave.
+
 2. The enclave queries the database with the forwarded request, and information is retrieved on behalf of the agent.
+
 3. The raw, un-sanitized data passes through the sanitization pipeline, scrubbing user PHI. Regex handles structured data, NER models catch more complex sentences and information, and AI handles edge cases.
+
 4. After the data is confirmed to be sanitized, it is returned to the agentic for it to continue its workflow.
 
