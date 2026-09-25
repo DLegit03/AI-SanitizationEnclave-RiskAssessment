@@ -33,7 +33,7 @@ This Information System is designed to intercept database queries made by autono
 
 This risk assessment was performed using qualitative descriptions (from Low to Critical), based on threats detailed in the NIST AI RMF 1.0 and NIST AI 100-2e2023.
 
-<img width="200" height="100" alt="image" src="https://github.com/user-attachments/assets/6598a191-cec6-4b68-81dd-f9fc6719f096" />
+<img width="400" height="200" alt="image" src="https://github.com/user-attachments/assets/6598a191-cec6-4b68-81dd-f9fc6719f096" />
 
 
 ## Conclusion
