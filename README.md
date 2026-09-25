@@ -14,7 +14,7 @@ The assessment is purely being conducted on the information system described abo
 
 This Information System is designed to intercept database queries made by autonomous AI agents and require the corresponding payload to be sanitized of all PHI before being returned to the agent. 
 
-<img width="500" height="650" alt="enclave_topology" src="https://github.com/user-attachments/assets/a03327f8-abed-41cb-aaa7-fb6592269e8b" />
+<img width="500" height="450" alt="enclave_topology" src="https://github.com/user-attachments/assets/a03327f8-abed-41cb-aaa7-fb6592269e8b" />
 
 *Sanitization Enclave Data Flow*
 
